@@ -1,0 +1,48 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#020923;--panel:#071030;--line:#142048;--text:#f2f4ff;--muted:#8d99c2;--blue:#2f7bff;--purple:#6c4fe0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(2,9,35,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+header img{height:32px;width:auto;display:block}
+.nav{font-size:14px;font-weight:600;color:#fff;text-decoration:none;padding:10px 20px;border-radius:6px;background:var(--blue)}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+ background:radial-gradient(700px 320px at 90% 0,rgba(108,79,224,.25),transparent 70%),radial-gradient(500px 300px at 0 100%,rgba(47,123,255,.14),transparent 70%)}
+.hero .wrap{padding-top:112px;padding-bottom:104px}
+.tag{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:26px}
+.tag:before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--blue),var(--purple))}
+h1{font-size:clamp(34px,7vw,60px);line-height:1.06;margin:0 0 24px;letter-spacing:-.03em;font-weight:700;max-width:760px}
+h1 em{font-style:normal;color:var(--blue)}
+.lead{font-size:18px;color:var(--muted);max-width:540px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;padding:15px 30px;border-radius:6px;background:var(--blue);color:#fff;font-weight:600;font-size:15px;text-decoration:none}
+.btn.o{background:transparent;border:1px solid var(--line);color:var(--text)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:48px}
+h2{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--blue);margin:0;font-weight:700}
+h3{font-size:clamp(26px,4.5vw,36px);margin:0;letter-spacing:-.02em;line-height:1.2;font-weight:700;max-width:560px}
+.list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:56px 1fr;gap:6px 16px;padding:26px 0;border-bottom:1px solid var(--line)}
+.row i{font-style:normal;color:var(--purple);font-weight:700;font-size:14px;padding-top:4px}
+.row b{font-size:19px;font-weight:600}
+.row span{grid-column:2;color:var(--muted);font-size:15px}
+@media(min-width:720px){.row{grid-template-columns:72px 280px 1fr;align-items:baseline}.row span{grid-column:auto}}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:28px}
+.step i{font-style:normal;color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.1em}
+.step b{display:block;font-size:18px;margin:14px 0 6px;font-weight:600}
+.step span{color:var(--muted);font-size:15px}
+.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.pc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:32px}
+.pc small{color:var(--muted);font-size:14px;display:block}
+.pc .big{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:10px 0 6px;line-height:1.1}
+.cta{text-align:center;border:0;background:radial-gradient(600px 260px at 50% 100%,rgba(108,79,224,.22),transparent 70%)}
+.cta h3{margin:0 auto 14px}
+.cta p{color:var(--muted);margin:0}
+.cta .btns{justify-content:center}
+footer{padding:36px 0 44px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+footer img{height:24px;display:block}
+footer a{color:var(--text);text-decoration:none}
